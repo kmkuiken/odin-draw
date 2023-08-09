@@ -13,7 +13,17 @@ for (let i = 0; i < (size**2); i++) {
 let boxes = document.getElementsByClassName("box");
 
 for (let i = 0; i < boxes.length; i++) {
-  boxes[i].addEventListener("mouseover",  () => {
+  boxes[i].addEventListener("mousemove",  () => {
     boxes[i].style.backgroundColor = "black";
   });
 }
+
+
+
+for (let i = 0; i < boxes.length; i++) {
+  boxes[i].addEventListener("touchmove",  () => {
+    boxes[i].style.backgroundColor = "black";
+  });
+}
+
+

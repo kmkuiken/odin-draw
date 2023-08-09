@@ -2,16 +2,25 @@
   box-sizing: border-box;
 }
 
+p {
+  color: #cec8b8;
+  font-size: 30px;
+  margin: 0 100px 0 100px;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-color: #161616;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  margin: 20vh 100px;
+  margin: 20vh 100px 5vh 100px;
   height: 50vh;
   width: 50vh;
+  background-color: #cec8b8;
 }
