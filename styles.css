@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
+  color: #cec8b8;
 }
 
 p {
-  color: #cec8b8;
   font-size: 30px;
   margin: 0 100px 0 100px;
 }
