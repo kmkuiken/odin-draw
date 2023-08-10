@@ -2,9 +2,28 @@ const board = document.querySelector(".container");
 const sizeConfirm = document.querySelector("#board-size-confirm");
 const sizeInput = document.querySelector("#board-size");
 const clearBoard = document.querySelector("#clear-board");
+const colorPicker = document.querySelector("#color-change");
 let size = sizeInput.value;
 let defaultSize = 16;
 let boxes = document.getElementsByClassName("box");
+
+function addColorChangingEffect() {
+  // getting reference to new boxes
+  boxes = document.getElementsByClassName("box");
+  
+  // giving new boxes event listeners
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener("mousemove",  () => {
+      boxes[i].style.backgroundColor = `${colorPicker.value}`;
+    });
+  }
+  
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener("touchmove",  () => {
+      boxes[i].style.backgroundColor = `${colorPicker.value}`;
+    });
+  }
+}
 
 function createBoxes(startup, boxAmount) {
   if (startup === false) {
@@ -24,21 +43,8 @@ function createBoxes(startup, boxAmount) {
     board.appendChild(box);
   };
 
-  // getting reference to new boxes
-  boxes = document.getElementsByClassName("box");
-  
-  // giving new boxes event listeners
-  for (let i = 0; i < boxes.length; i++) {
-    boxes[i].addEventListener("mousemove",  () => {
-      boxes[i].style.backgroundColor = "black";
-    });
-  }
-  
-  for (let i = 0; i < boxes.length; i++) {
-    boxes[i].addEventListener("touchmove",  () => {
-      boxes[i].style.backgroundColor = "black";
-    });
-  }
+  addColorChangingEffect();
+
 };
 
 // create initial boxes on startup
@@ -61,5 +67,9 @@ clearBoard.addEventListener("click", () => {
   createBoxes(false, defaultSize);
 });
 
+// Changing effect on boxes when color is changed
+colorPicker.addEventListener("input", (event) => {
+  addColorChangingEffect();
+});
 
 
