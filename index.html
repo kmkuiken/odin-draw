@@ -7,15 +7,25 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <p class="instructions">
+    Drag the mouse across the artboard to begin drawing.  
+  </p>
+  
   <div class="settings">
     <input type="range" name="board-size" id="board-size" value="16" min="2" max="100">
     <label for="board-size">
       Choose your desired board size.
     </label>
+    
     <button id="board-size-confirm">Confirm</button>
-    <p class="instructions">
-      Drag the mouse across the artboard to begin drawing.  
-    </p>
+    
+    <button id="clear-board">Clear Board</button>
+    
+    <input type="color" value="#00000" id="color-change">
+    <label for="color-change">
+      Choose your color
+    </label>
+    <button id="color-change-confirm">Confirm</button>
   </div>
 
   <div class="container"></div>
