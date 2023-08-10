@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap-reverse;
   background-color: #161616;
 }
 
@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 20vh 100px 5vh 100px;
-  height: 50vh;
-  width: 50vh;
+  height: 45vw;
+  width: 45vw;
   background-color: #cec8b8;
 }

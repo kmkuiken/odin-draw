@@ -7,7 +7,7 @@ let boxes = document.getElementsByClassName("box");
 
 for (let i = 0; i < (defaultSize**2); i++) {
   const box = document.createElement("div");
-  box.style.cssText = `width: calc(50vh/${defaultSize}); height: calc(50vh/${defaultSize}); 
+  box.style.cssText = `width: calc(45vw/${defaultSize}); height: calc(45vw/${defaultSize}); 
                        border-color: black; border-style: solid; border-width: 1px;`;
   box.setAttribute("class", "box");
   board.appendChild(box);
@@ -41,7 +41,7 @@ sizeConfirm.addEventListener("click", () => {
     // creating new boxes with new size parameter
     for (let i = 0; i < (size**2); i++) {
       const box = document.createElement("div");
-      box.style.cssText = `width: calc(50vh/${size}); height: calc(50vh/${size}); 
+      box.style.cssText = `width: calc(45vw/${size}); height: calc(45vw/${size}); 
                            border-color: black; border-style: solid; border-width: 1px;`;
       box.setAttribute("class", "box");
       board.appendChild(box);
