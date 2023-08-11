@@ -69,7 +69,7 @@ clearBoard.addEventListener("click", () => {
 
 // Changing effect on boxes when color is changed
 colorPicker.addEventListener("input", (event) => {
-  addColorChangingEffect();
+  addColorChangingEffect
 });
 
 
