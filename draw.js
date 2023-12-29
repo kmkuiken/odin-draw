@@ -72,4 +72,8 @@ colorPicker.addEventListener("input", (event) => {
   addColorChangingEffect
 });
 
-
+// Toggle settings
+document.getElementById('toggle-settings').addEventListener('click', function() {
+  var settings = document.querySelector('.settings');
+  settings.classList.toggle('visible'); 
+});
