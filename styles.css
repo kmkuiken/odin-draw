@@ -30,7 +30,7 @@ body {
   display: none;
 }
 
-.settings.visable {
+.settings.visible {
   display: grid;
   grid-template: 3em auto auto / auto auto auto;
   width: 45vw;
